@@ -1,7 +1,8 @@
 import React from 'react';
 import './postContent.css';
+import './postContent.css';
 
-function PostContent(props) {
+const PostContent = (props) => {
     return <div>{props.content}</div>
 }
 

@@ -23,5 +23,10 @@
     "title": "Real article",
     "text": "Real text for real article",
     "currentLikes": 11
+  },
+  {
+    "title": "Additional",
+    "text": "",
+    "currentLikes": 54
   }
 ]

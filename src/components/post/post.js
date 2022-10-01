@@ -4,7 +4,7 @@ import PostContent from "./postContent";
 import PostLikes from "./postLikes";
 import './post.css';
 
-function Post(props) {
+const Post = (props) => {
     return (
         <div className="post">
             <PostTitle content={props.title} />

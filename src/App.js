@@ -1,15 +1,11 @@
 import React from 'react';
-import Post from "./components/post/post";
-import data from './assets/mock-data.json'
+import Feed from "./components/feed/feed";
+import './App.css';
 
 function App() {
-  console.log(data)
-
   return (
       <div className="App">
-          {data.map((value, i) =>
-            <Post key={i} title={value.title} text={value.text} currentLikes={value.currentLikes} />
-          )}
+          <Feed />
       </div>
   );
 }
