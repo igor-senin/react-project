@@ -1,0 +1,25 @@
+.commentListButton {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 5px 5px;
+  min-height: 25px;
+}
+
+.arrowUp {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+
+  border-bottom: 8px solid teal;
+}
+
+.arrowDown {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+
+  border-top: 8px solid teal;
+}

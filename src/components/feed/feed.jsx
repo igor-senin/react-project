@@ -1,13 +1,20 @@
 import React from 'react';
-import data from "../../assets/mock-data.json";
+import articles from "../../assets/articles.json";
 import Post from "../post/post";
 import classes from './feed.module.css';
 
 const Feed = () => {
     return (
         <div className={classes.feed}>
-            {data.map((value, i) =>
-                <Post key={i} title={value.title} text={value.text} currentLikes={value.currentLikes} />
+            {articles.map(value =>
+                <Post
+                    key={value.articleId}
+                    articleId={value.articleId}
+                    title={value.title}
+                    text={value.text}
+                    currentLikes={value.currentLikes}
+                    commentsCount={value.commentsCount}
+                />
             )}
         </div>
     );
