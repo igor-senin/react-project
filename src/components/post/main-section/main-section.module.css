@@ -1,0 +1,7 @@
+.mainSection {
+    position: relative;
+    padding: 0;
+    width: 500px;
+    min-height: 200px;
+    border-bottom: 1px solid silver;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import articles from "../../assets/articles.json";
+import articles from "../../assets/data/articles.json";
 import Post from "../post/post";
 import classes from './feed.module.css';
 
