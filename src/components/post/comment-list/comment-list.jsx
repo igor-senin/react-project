@@ -13,14 +13,6 @@ const CommentList = ({articleId}) => {
         getComments(articleId).then(fetchedData => setComments(fetchedData))
     }, []);
 
-    const onContentChange = event => {
-        setCurContent(event.target.value);
-    }
-
-    const onAuthorChange = event => {
-        setCurAuthor(event.target.value);
-    }
-
     const addComment = event => {
         event.preventDefault();
 
@@ -60,8 +52,8 @@ const CommentList = ({articleId}) => {
             }
             {comments ?
                 <AddComment
-                    onContentChange={onContentChange}
-                    onAuthorChange={onAuthorChange}
+                    onContentChange={event => setCurContent(event.target.value)}
+                    onAuthorChange={event => setCurAuthor(event.target.value)}
                     addComment={addComment}
                     curContent={curContent}
                     curAuthor={curAuthor}
