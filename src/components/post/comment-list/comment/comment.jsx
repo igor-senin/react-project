@@ -1,9 +1,13 @@
 import React, {useState} from 'react';
 import classes from './comment.module.css';
-import CloseButton from 'react-bootstrap/CloseButton';
 
-const Comment = ({author, text}) => {
+const Comment = ({deleteComment, author, text, commentIndex}) => {
     const [deleted, setDeleted] = useState(false);
+
+    const removeComment = () => {
+        setDeleted(!deleted);
+        deleteComment(commentIndex);
+    }
 
     return (
         <div>
@@ -11,9 +15,9 @@ const Comment = ({author, text}) => {
                 <div className={classes.comment}>
                     <h4 style={{margin: 5}}>{author}</h4>
                     <div style={{margin: 5}}>{text}</div>
-                    <CloseButton
+                    <button
                         className={classes.closeButton}
-                        onClick={() => setDeleted(!deleted)}
+                        onClick={removeComment}
                     />
                 </div> : <div/>
             }
