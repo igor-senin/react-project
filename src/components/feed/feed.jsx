@@ -16,8 +16,7 @@ const Feed = () => {
     const addNewArticle = event => {
         event.preventDefault();
 
-        let maxId = 0;
-        articles.forEach(elem => maxId = Math.max(maxId, elem.articleId));
+        const maxId = Math.max(...articles.map(it => it.articleId));
 
         const newArticle = {
             articleId: maxId+1,

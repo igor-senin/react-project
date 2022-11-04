@@ -18,7 +18,7 @@ const Post = (props) => {
                 text={props.text}
                 currentLikes={props.currentLikes}
             />
-            {commentsOpened ? <CommentList articleId={props.articleId} /> : <div/>}
+            {commentsOpened && <CommentList articleId={props.articleId} />}
         </div>
     );
 }

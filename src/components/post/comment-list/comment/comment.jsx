@@ -11,7 +11,7 @@ const Comment = ({deleteComment, author, text, commentIndex}) => {
 
     return (
         <div>
-            {!deleted ?
+            {!deleted &&
                 <div className={classes.comment}>
                     <h4 style={{margin: 5}}>{author}</h4>
                     <div style={{margin: 5}}>{text}</div>
@@ -19,7 +19,7 @@ const Comment = ({deleteComment, author, text, commentIndex}) => {
                         className={classes.closeButton}
                         onClick={removeComment}
                     />
-                </div> : <div/>
+                </div>
             }
         </div>
     );
