@@ -1,15 +1,24 @@
-import React from 'react';
-import PostTitle from "./post-title/post-title";
-import PostContent from "./post-content/post-content";
-import PostLikes from "./post-likes/post-likes";
+import React, {useState} from 'react';
+import CommentList from "./comment-list/comment-list";
 import classes from './post.module.css';
+import MainSection from "./main-section/main-section";
 
-const Post = ({title, text, currentLikes}) => {
+const Post = (props) => {
+    const [commentsOpened, setCommentsOpened] = useState(false);
+
+    const openComments = () => {
+        setCommentsOpened(!commentsOpened);
+    }
+
     return (
         <div className={classes.post}>
-            <PostTitle content={title} />
-            <PostContent content={text} />
-            <PostLikes amount={currentLikes} />
+            <MainSection
+                handler={openComments}
+                title={props.title}
+                text={props.text}
+                currentLikes={props.currentLikes}
+            />
+            {commentsOpened && <CommentList articleId={props.articleId} />}
         </div>
     );
 }
